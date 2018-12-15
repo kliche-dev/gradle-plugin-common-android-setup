@@ -1,0 +1,11 @@
+
+publishing {
+    publications {
+        register("mavenJava", org.gradle.api.publish.maven.MavenPublication::class) {
+            from(components["java"])
+            groupId = POM_GROUP_ID
+            artifactId = POM_ARTIFACT_ID
+            version = POM_VERSION
+        }
+    }
+}
